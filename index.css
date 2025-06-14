@@ -1,0 +1,54 @@
+/* Setting display:none in webflow to prevent the messed up layout (swiper.js doesn't load in webflow) */
+.swiper.home_card-swiper {
+  display: block !important;
+}
+
+/* For WebKit-based browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Custom Scrollbar Styles */
+/* Works in Chrome, Safari, Edge (Webkit browsers) */
+/* ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-primary);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-primary);
+  opacity: 0.8;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+} */
+
+/* Firefox support */
+/* * {
+  scrollbar-width: thin;
+  scrollbar-color: var(--text-primary) transparent;
+} */

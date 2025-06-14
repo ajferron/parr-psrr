@@ -1,0 +1,188 @@
+/* .swiper-slide-active .card_wrapper {
+  z-index: 20 !important;
+} */
+
+.disable-scroll {
+  overflow: hidden;
+}
+
+.swiper-slide * {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.swiper-cards .swiper-slide {
+  overflow: visible;
+}
+
+.swiper-slide-active .swiper-slide-shadow {
+  opacity: 0 !important;
+}
+
+.card.swiper-slide .card_wrapper:not(.flipped) .card_back > * {
+  display: none;
+}
+
+.swiper-slide-shadow {
+  border-radius: var(--cards--corner-radius);
+}
+
+.card ul {
+  list-style-position: inside;
+}
+.card-info ul, .card_content-scroll ul {
+  list-style-position: outside;
+}
+
+.search-fab {
+  background-color: hsla(0, 0%, 0%, 1);
+  background-image: radial-gradient(
+      at 21% 27%,
+      hsla(28, 100%, 0%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 54% 26%, hsla(0, 0%, 27%, 1) 0px, transparent 50%),
+    radial-gradient(at 65% 69%, hsla(355, 0%, 0%, 1) 0px, transparent 50%),
+    radial-gradient(at 39% 57%, hsla(0, 0%, 26%, 1) 0px, transparent 50%);
+}
+
+.card_wrapper {
+  /* position: relative;
+    width: 100%;
+    height: 400px; */
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    scale 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+  /* border-radius: 16px;
+    background-size: cover;
+    background-position: center; */
+}
+
+/* .card_wrapper .card_back {
+  display: none;
+  opacity: 0;
+} */
+
+/* .card_wrapper.flipped {
+  transform: rotateY(180deg);
+}
+.card_wrapper.flipped .card_back {
+  display: flex !important;
+  opacity: 1 !important;
+}
+
+.card_wrapper.shrink {
+  scale: 0.95;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card_wrapper:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+} */
+
+/* .card_cover,
+  .card_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    color: white;
+  } */
+
+.card_cover {
+  /* background-image: linear-gradient(135deg, #e74c3c, #c0392b); */
+  z-index: 1;
+}
+
+.card_back {
+  /* background-image: linear-gradient(135deg, #3498db, #2980b9); */
+  transform: rotateY(180deg);
+  z-index: 2;
+}
+
+.card-menu_topic-menu_item .card-menu_item-btn .card-menu_item-label p {
+  padding: 5px;
+  /* border-radius: 0 1.15rem 0 0 1.15rem; */
+  width: min-content;
+  white-space: nowrap;
+  padding: 8px 12px;
+  /* background-color: hsla(0, 0.00%, 0.00%, 0.45); */
+  /* background-color: #00000080; */
+  background: linear-gradient(
+    0deg,
+    #00000000 0%,
+    #00000000 7.5px,
+    #00000090 7.75px,
+    #00000090 100%
+  );
+  backdrop-filter: blur(6px);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: -8px;
+  border-radius: 0 1.15rem 1.15rem 0;
+  cursor: pointer;
+}
+@media screen and (max-width: 991px) {
+  .card-menu_topic-menu_item .card-menu_item-btn .card-menu_item-label p {
+    font-size: 0.9rem; /* or adjust smaller as needed */
+  }
+}
+.card-menu_topic-menu_item
+  .card-menu_item-btn
+  .card-menu_item-label
+  p:first-child {
+  border-radius: 1.15rem 1.15rem 1.15rem 0;
+}
+.card-menu_topic-menu_item
+  .card-menu_item-btn
+  .card-menu_item-label
+  p:last-child {
+  margin-bottom: 0;
+  border-radius: 0 1.15rem 1.15rem 1.15rem;
+  background: #00000090;
+}
+.card-menu_topic-menu_item
+  .card-menu_item-btn
+  .card-menu_item-label
+  p:only-child {
+  margin-bottom: 0;
+  border-radius: 1.15rem;
+}
+
+/* 
+  .main-wrapper {
+    background-color: rgb(255, 255, 255);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 3000 3000' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"),
+      radial-gradient(
+        circle at 39% 56%,
+        hsla(27.428571428571416, 85%, 91%, 1) 1%,
+        transparent 68%
+      ),
+      radial-gradient(
+        circle at 12% 48%,
+        hsla(311.1111111111111, 81%, 93%, 1) 8%,
+        transparent 55%
+      ),
+      radial-gradient(
+        circle at 15% 99%,
+        hsla(337.5, 84%, 92%, 1) 20%,
+        transparent 80%
+      ),
+      radial-gradient(
+        circle at 100% 41%,
+        hsla(247, 77%, 95%, 0) 5%,
+        transparent 79%
+      );
+    background-blend-mode: overlay, normal, normal, normal, normal;
+  } */
