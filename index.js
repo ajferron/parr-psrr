@@ -171,7 +171,7 @@ $(function () {
     }, "-=0.2"); // Start fading in slightly before card animation completes
   }
 
-  const cardSwiper = new Swiper(".swiper", {
+  new Swiper(".swiper", {
     effect: "cards",
     grabCursor: true,
     keyboard: true,
@@ -180,42 +180,5 @@ $(function () {
       perSlideOffset: 24,
       perSlideRotate: 8,
     },
-    // loopAddBlankSlides: true,
-    // slidesPerView: 1,
-    // slidesPerGroup: 1,
-    // loop: true,
-    // loopedSlides: 3,
-    // autoplay: {
-    //   delay: 4000,
-    // },
   });
-
-
-  // Get the frame element
-  const frame = document.querySelector('.frame');
-  // Use CSS calc() with vw units - no JavaScript calculation needed
-  // 280vw = window.innerWidth * 2.8
-  // let maxTranslation = 'max(280vw, 1300px)';
-  // document.documentElement.style.setProperty('--max-translation', 'max(280vw, 1300px)');
-
-  // gsap.to(frame, {
-  //     x: `calc(-1 * var(--max-translation))`, // Use CSS calc directly
-  //     ease: "none",
-  //     scrollTrigger: {
-  //         trigger: ".track",
-  //         start: "top top",
-  //         end: "bottom top",
-  //         scrub: true,
-  //         pin: true,
-  //         anticipatePin: 1,
-  //     }
-  // });
-
-  // // Recalculate on window resize
-  // window.addEventListener('resize', () => {
-  //     // newMaxTranslation = Math.max(window.innerWidth * 2.8, 1300);
-      
-  //     // Update the animation with new values
-  //     ScrollTrigger.refresh();
-  // });
 });

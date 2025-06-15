@@ -4,60 +4,34 @@ $(function () {
         $(this).css('transform', `rotate(${randomRotation}deg)`);
     });
 
-    $('.blog_grid_item-link').hover(
-        function() {
-            const $item = $(this).closest('.blog_grid_item');
-            const $image = $item.find('.shadow-medium');
-            const $link = $(this);
-            
+    $('.blog_grid_link').hover(
+        function () {
+            const $image = $(this).find('.shadow-medium');
+            const $accent = $(this).find('.blog_grid_item-accent');
+
             gsap.to($image, {
-                scale: 1.08,
+                scale: 1.05,
                 duration: 0.3,
                 ease: "power2.out"
             });
-            
-            gsap.to($link, {
-                scale: 1.15,
+            gsap.to($accent, {
+                scale: 1.1,
                 duration: 0.2,
                 ease: "back.out(1.2)"
             });
         },
-        function() {
-            const $item = $(this).closest('.blog_grid_item');
-            const $image = $item.find('.shadow-medium');
-            const $link = $(this);
-            
+        function () {
+            const $image = $(this).find('.shadow-medium');
+            const $accent = $(this).find('.blog_grid_item-accent');
+
             gsap.to($image, {
                 scale: 1,
                 duration: 0.3,
                 ease: "power2.out"
             });
-            
-            gsap.to($link, {
+            gsap.to($accent, {
                 scale: 1,
                 duration: 0.2,
-                ease: "power2.out"
-            });
-        }
-    );
-    
-    // Image hover: scales only the image with parallax effect
-    $('.blog_grid_item-image').hover(
-        function() {
-            const $image = $(this);
-            
-            gsap.to($image, {
-                scale: 1.08,
-                duration: 0.6,
-                ease: "power3.out"
-            });
-        },
-        function() {
-            const $image = $(this);
-            
-            gsap.to($image, {
-                scale: 1,
-                duration: 0.5,
                 ease: "power2.out"
             });
         }
